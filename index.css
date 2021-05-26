@@ -1,0 +1,501 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    cursor: default;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    --app-roundness: 12px;
+    --grid-tightness: 10px;
+}
+
+.container
+{
+    display: flex;
+    user-select: none;
+    width: 437;
+}
+
+.frame
+{
+    height: 910px;
+    width: 430px;
+    background: #171717;
+    border-radius: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebutton
+{
+    height: 100px;
+    width: 7px;
+    background: black;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: 0.2s width;
+}
+
+.sidebutton:hover
+{
+    width: 10px;
+}
+
+.off
+{
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-radius: 37px;
+}
+
+.off > div
+{
+    display: none;
+}
+
+.on
+{
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 37px;
+}
+
+.screencontent
+{
+    padding: 20px;
+}
+
+.app_welcome
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.app_welcome > img
+{
+    height: 200px;
+    width: 200px;
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    animation: img_load 1s ease;
+}
+
+@keyframes img_load
+{
+    0%
+    {
+        height: 100px;
+        width: 150px;
+    }
+
+    20%
+    {
+        height: 210px;
+        width: 210px;
+    }
+
+    30%
+    {
+        transform: rotate(0deg);
+    }
+
+    40%
+    {
+        height: 200px;
+        width: 200px;
+    }
+
+    60%
+    {
+        transform: rotate(-20deg);
+    }
+
+    70%
+    {
+        transform: rotate(10deg);
+    }
+
+    80%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.continue_button
+{
+    border: none;
+    background: #cc1464;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-left: 90px;
+    margin-top: 800px;
+    box-shadow: #919191 0px 0px 10px;
+    position: absolute;
+}
+
+.continue_button:active
+{
+    background: #f03c8a;
+}
+
+.welcome_title
+{
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.welcome_subtitle
+{
+    font-size: 20px;
+}
+
+.face_id
+{
+    width: 20px;
+    height: 20px;
+    background: #171717;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 30px;
+}
+
+.lock_screen
+{
+    height: 910px;
+    width: 430px;
+    margin-left: -20px;
+    border-radius: 37px;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+.time
+{
+    z-index: 9999;
+    color: black;
+    font-size: 60px;
+}
+
+.background
+{
+    background: url('./img/kebnekaise.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -200px;
+}
+
+.bottom
+{
+    position: absolute;
+    bottom: 60px;
+    margin-left: 110px;
+}
+
+.bottom > h5
+{
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.touch_id
+{
+    width: 60px;
+    transition: 0.2s fill;
+    cursor: pointer;
+}
+
+.touch_id:hover
+{
+    fill: #cc1464;
+}
+
+.touchid 
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.touch_id:hover
+{
+    cursor: pointer;
+}
+
+.notifications
+{
+    text-align: initial;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.alerts
+{
+    background: #eb4034;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 10px;
+    margin-left: -10px;
+    margin-top: 25px;
+    cursor: pointer !important;
+}
+
+.lock_screen_widget > img
+{
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer !important;
+}
+
+.lock_screen_widget 
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.openapp
+{
+    width: 70px;
+    height: 40px;
+    margin-left: -50px;
+    background: none;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.alert
+{
+    background: white;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 120px;
+    opacity: 0%;
+    transition: opacity 0.1s;
+    z-index: 100000;
+}
+
+.alert > h3, .alert > h5
+{
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.alert > h5
+{
+    margin-top: -10px;
+}
+
+.dismiss
+{
+    width: 100%;
+    height: 40px;
+    background: none;
+    border: none;
+    border-top: 2px solid #f5f5f5;
+    color: #f03c8a;
+    transition: 0.06s;
+    font-size: 15px;
+}
+
+.dismiss:active
+{
+    color: #f5f5f5;
+}
+
+.shown
+{
+    transition: 0.1s;
+    opacity: 100%;
+}
+
+.screenstopper
+{
+    height: 910px;
+    width: 430px;
+    background: transparent;
+    position: absolute;
+    z-index: 99999;
+    margin-top: -248px;
+    border-radius: 37px;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.slider 
+{
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: #d3d3d3; 
+    outline: none;
+    overflow-y: hidden;
+    transform: rotate(-90deg) translateY(195px) translateX(70px);
+    border-radius: 10px;
+    transition: 0.2s width ease;
+}
+
+.slider:hover
+{
+    width: 100px;
+}
+
+.slider::-webkit-slider-thumb 
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1px; 
+    height: 25px; 
+    background: white;
+    box-shadow: -100vw 0 0 100vw white;
+}
+
+.slider
+{
+    overflow: hidden;
+}
+
+.slider::-moz-range-thumb
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1px; 
+    height: 25px; 
+    background: white;
+    border: none;
+    box-shadow: -100vh 0 0 100vh white;
+    overflow: hidden;
+}
+
+#time > h4
+{
+    font-size: 20px;
+}
+
+.circular-chart 
+{
+    display: block;
+    margin: 10px auto;
+    height: 50px;
+}
+  
+.circle 
+{
+    stroke: #14d927;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease forwards;
+}
+  
+@keyframes progress 
+{
+    0% 
+    {
+      stroke-dasharray: 0 100;
+    }
+}
+
+#battery
+{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+
+.batterytext
+{
+    position: absolute;
+    bottom: 75px;
+    left: 29px;
+    color: #14d927;
+}
+
+.lock_screen
+{
+    transition: 0.1s ease opacity;
+}
+
+.home_screen
+{
+    opacity: 0%;
+    transition: 0.1s ease opacity;
+}
+
+.app > img
+{
+    height: 45px;
+    border-radius: var(--app-roundness);
+    cursor: pointer !important;
+}
+
+.app 
+{
+    display: flex;
+    margin: var(--grid-tightness);
+}
+
+.app > button 
+{
+    width: 45px;
+    height: 45px;
+    margin-left: -55px;
+}
+
+.app_grid
+{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap !important;
+    height: 90%;
+}
+
+.app > .alerts
+{
+    background: #eb4034;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 10px;
+    margin-left: -10px;
+    margin-top: 32px;
+    cursor: pointer !important;  
+}
