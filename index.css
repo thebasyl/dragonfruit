@@ -11,8 +11,9 @@
     font-weight: normal;
     font-style: normal;
     text-decoration: none;
-    --app-roundness: 12px;
-    --grid-tightness: 10px;
+    --app-roundness: 13px;
+    --grid-tightness: 25px;
+    --app-size: 50px;
 }
 
 .container
@@ -459,7 +460,7 @@
 
 .app > img
 {
-    height: 45px;
+    height: var(--app-size);
     border-radius: var(--app-roundness);
     cursor: pointer !important;
 }
@@ -472,8 +473,8 @@
 
 .app > button 
 {
-    width: 45px;
-    height: 45px;
+    width: var(--app-size);
+    height: var(--app-size);
     margin-left: -55px;
 }
 
