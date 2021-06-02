@@ -11,9 +11,13 @@
     font-weight: normal;
     font-style: normal;
     text-decoration: none;
+}
+
+:root
+{
     --app-roundness: 13px;
-    --grid-tightness: 25px;
-    --app-size: 50px;
+    --grid-tightness: 30px;
+    --app-size: 45px;
 }
 
 .container
@@ -468,6 +472,7 @@
 .app 
 {
     display: flex;
+    position: relative;
     margin: var(--grid-tightness);
 }
 
@@ -489,6 +494,7 @@
 .app > .alerts
 {
     background: #eb4034;
+    position: absolute;
     color: white;
     width: 20px;
     height: 20px;
@@ -496,7 +502,7 @@
     line-height: 20px;
     text-align: center;
     font-size: 10px;
-    margin-left: -10px;
-    margin-top: 32px;
+    bottom: -10px;
+    left: 0;
     cursor: pointer !important;  
 }
