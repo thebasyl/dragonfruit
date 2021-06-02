@@ -25,6 +25,9 @@ window.onload = function()
     const time = document.getElementById('time');
     const touchid = document.getElementById('touchid');
     const home_screen = document.getElementById('home_screen');
+    const appsizeslider = document.getElementById('appsizeslider');
+    const gridtightnessslider = document.getElementById('gridtightnessslider');
+    const approundessslider = document.getElementById('approundessslider');
     var tid = 0;
     var speed;
     volumeslider.value = localStorage.getItem('volume');
@@ -161,4 +164,19 @@ window.onload = function()
     }
     touchid.addEventListener('mousedown', toggleOn);
     touchid.addEventListener('mouseup', toggleOff);
+    appsizeslider.addEventListener('change', appsize);
+    gridtightnessslider.addEventListener('change', gridtightness);
+    approundessslider.addEventListener('change', approundess);
+    function appsize()
+    {
+        $(':root').css('--app-size', appsizeslider.value + 'px');
+    }
+    function gridtightness()
+    {
+        $(':root').css('--grid-tightness', gridtightnessslider.value + 'px');
+    }
+    function approundess()
+    {
+        $(':root').css('--app-roundness', approundessslider.value + 'px');
+    }
 }
